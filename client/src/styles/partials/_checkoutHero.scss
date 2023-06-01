@@ -1,0 +1,41 @@
+@mixin CheckOutHero {
+
+    .checkOutHero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('https://images.pexels.com/photos/876467/pexels-photo-876467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');//change this img.
+        background-size: cover;
+        background-position: center 500px;
+        padding: 111px 0 85px;
+    
+            h1 {
+                margin-bottom: 15px;
+                color: $darkHeading
+            }
+    
+            ul {
+                display: flex;
+            }
+    
+            li {
+                list-style: none;
+                color: $navGray;
+                font-size: 18px;
+    
+                &:last-child {
+                    padding-left: 15px;
+                }
+    
+                a {
+                    color: $navGray;
+                    text-decoration: none;
+                    transition: .4s;
+    
+                    &:hover {
+                        color: $plusRed;
+                    }
+                }
+            }
+        }
+}

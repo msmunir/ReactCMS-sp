@@ -1,0 +1,44 @@
+@mixin productDetailsHero {
+    // height: 300px;
+    background-image: url('https://images.pexels.com/photos/277320/pexels-photo-277320.jpeg ');
+    background-image: url('https://images.pexels.com/photos/1228514/pexels-photo-1228514.jpeg');
+    background-size: cover;
+    background-position: center 500px;
+    padding: 111px 0 85px;
+
+
+    .titleSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 15px;
+            color: $darkHeading
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            color: $navGray;
+            font-size: 18px;
+
+            &:last-child {
+                padding-left: 15px;
+            }
+
+            a {
+                color: $navGray;
+                text-decoration: none;
+                transition: .4s;
+
+                &:hover {
+                    color: $plusRed;
+                }
+            }
+        }
+    }
+}

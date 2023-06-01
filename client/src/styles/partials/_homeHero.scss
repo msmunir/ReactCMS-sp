@@ -1,0 +1,53 @@
+@mixin homeHero {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8rem;
+    background-color: #eeeeee;
+    // height: 825px;
+    width: 100%;
+    .leftText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap; /* aligns text to the left */
+      padding: 0 40px 0 40px;
+
+      h6 {
+        font-size: 18px;
+        line-height: 1.2380952381;
+        text-transform: capitalize;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        font-size: 60px;
+
+        line-height: 1.2333333333;
+        margin-bottom: 2.5rem;
+      }
+
+      .btn-hero {
+        width: 30% !important;
+        font-size: 1.5rem;
+        background-color: $plusRed;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        padding: 15px 25px;
+        cursor: pointer;
+      }
+      .btn-hero:hover {
+        background: $plusRed;
+      }
+    }
+
+    .rightImage {
+      height: 625px;
+      width: 647px;
+      // object-fit: contain;
+      background-color: #c5bebe;
+      margin: 40px 0; /* adds space between the two columns */
+    }
+  }
+}

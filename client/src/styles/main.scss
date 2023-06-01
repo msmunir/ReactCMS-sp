@@ -1,0 +1,155 @@
+@import "./partials/variables";
+@import "./partials/navbar";
+@import "./partials/contactHero";
+@import "./partials/contactForm";
+@import "./partials/contactMap";
+@import "./partials/homeHero";
+@import "./partials/footer";
+@import "./partials/loginForm";
+@import "./partials/productDetailsHero";
+@import "./partials/registerForm";
+@import "./partials/watchCollection";
+@import "./partials/selectedProduct";
+@import "./partials/ratings";
+@import "./partials/productDetailsSection";
+@import "./partials/description";
+@import "./partials/relatedProducts";
+@import "./partials/product270";
+@import "./partials/featuredProducts";
+@import "./partials/subscription";
+@import "./partials/shoppingCart";
+@import "./partials/carousel";
+@import "./partials/productCard";
+@import "./partials/checkOut";
+@import "./partials/orderLine";
+@import "./partials/getOrder";
+@import "./partials/userCom";
+@import "./partials/orderDetails";
+@import "./partials/oneOrderLine";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.outlet {
+  flex: 1;
+}
+.navbar {
+  @include navbar;
+}
+
+.footer {
+  @include footer;
+}
+
+.loginForm {
+  @include loginForm;
+}
+
+.contactHero {
+  @include contactHero;
+}
+
+.contactForm {
+  @include contactForm;
+}
+
+.contactMap {
+  @include contactMap;
+}
+
+//Josef
+
+//Ulrika
+
+.registerForm {
+  @include registerForm;
+}
+
+.shoppingCart {
+  @include shoppingCart;
+}
+
+.checkOut {
+  @include checkOut;
+}
+
+//Shahriar
+.homeHero {
+  @include homeHero;
+}
+.watchCollection {
+  @include watchCollection;
+}
+.selectedProduct {
+  @include selectedProduct;
+}
+
+.getOrder {
+  @include getOrder;
+}
+
+.userCom {
+  @include userCom;
+}
+
+//Josef
+.subscription {
+  @include subscription;
+}
+
+//Ulrika
+
+//Shahriar
+.ratings {
+  @include ratings;
+}
+
+.carousel {
+  @include carousel;
+}
+.productCard {
+  @include productCard;
+}
+
+//Calle
+.productDetailsHero {
+  @include productDetailsHero;
+}
+.productDetailsSection {
+  @include productDetailsSection;
+}
+.description {
+  @include description;
+}
+.relatedProducts {
+  @include relatedProducts;
+}
+.product270 {
+  @include product270;
+}
+.featuredProducts {
+  @include featuredProducts;
+}
+
+.orderLine {
+  @include orderLine;
+}
+
+.OrderDetails {
+  @include OrderDetails;
+}
+
+.oneOrderLine {
+  @include oneOrderLine;
+}

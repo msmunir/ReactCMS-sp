@@ -1,0 +1,109 @@
+
+@mixin loginForm {
+    display: flex;
+    justify-content: center;
+  
+
+    .wrapper {
+    height: 478px;
+    width: 1138px;
+    background-color: #fff;
+    box-shadow: 0 0 30px #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #636363;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    font-family: var(--body-font);
+    margin-top: 31rem;
+    margin-bottom: 38rem;
+
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      .loginRegister {
+        display: flex;
+        gap: .5rem;
+
+        a {
+          color: $navGray;
+          text-decoration: none;
+           font-size: 16px;
+           transition: .4s;
+
+           &:hover {
+               color: $plusRed;
+           }
+           
+       }
+      }
+
+      .login-row p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        
+
+        a {
+          margin-left: 10px;
+          text-decoration: none;
+          color: blue;
+        }
+      }
+  
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        // margin-bottom: 10px;
+        text-align: left;
+
+        #checkbox {
+          fill: rgb(250, 250, 250);
+          width: 15px;
+        }
+      }
+
+  
+      input {
+        height: 50px;
+        width: 1062px;
+        background-color: rgb(250, 250, 250);
+        padding: 5px;
+        margin-bottom: 10px;
+        border: none;
+      }
+
+      label {
+        margin-bottom: 10px;
+      }
+  
+      .error {
+        color: $plusRed;
+      }
+      
+      #btn-submit {
+        height: 50px;
+        width: 142px;
+        letter-spacing: 0.01em;
+        padding: 0px 45px;
+        background-color: $plusRed;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 450;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin-top: 20px;
+      }
+    }
+  }
+  
+
+ 

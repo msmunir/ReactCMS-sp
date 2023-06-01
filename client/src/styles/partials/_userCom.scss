@@ -1,0 +1,32 @@
+@mixin userCom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .orderList {
+    width: 900px;
+    padding: 1rem;
+    // border: 1px solid $lightGray;
+    box-shadow: 0 0 30px #f8f8f8;
+    color: #636363;
+  }
+
+  .orderLineDescription {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    height: 50px;
+
+    border-bottom: 1px solid $lightGray;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
