@@ -105,19 +105,25 @@ const ProductList = () => {
                     <td>{item.description}</td>
 
                     <td className="d-flex justify-content-center align-items-center">
-                      <button
-                        type="button"
-                        className="btn btn-primary custom-Ebtn customBtn"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-danger custom-Dbtn customBtn"
-                        onClick={(e) => handleDelete(e, item._id)}
-                      >
-                        Delete
-                      </button>
+                      <div>
+                        <Link to={`/productDetails/${item._id}`}>
+                          <button
+                            type="button"
+                            className="btn btn-primary custom-Ebtn customBtn"
+                          >
+                            Edit
+                          </button>
+                        </Link>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          className="btn btn-danger custom-Dbtn customBtn"
+                          onClick={(e) => handleDelete(e, item._id)}
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 );

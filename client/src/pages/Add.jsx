@@ -124,7 +124,7 @@ const Add = () => {
             onChange={handleChange}
           ></textarea>
         </div>
-        <button className="btn btn-primary">Add Product</button>
+        <button className="btn btn-primary px-5">Add Product</button>
       </form>
     </div>
   );
