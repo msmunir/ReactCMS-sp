@@ -25,11 +25,11 @@ const App = () => {
         },
         {
           path: "productDetails/:id",
-          element: <ProductDetails />,
+          element: <ProductDetails user={user} />,
         },
         {
           path: "add",
-          element: <Add />,
+          element: <Add user={user} />,
         },
         {
           path: "order",

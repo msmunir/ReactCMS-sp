@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const Add = () => {
+const Add = ({ user }) => {
+  if (!user) return <Navigate to="/login" replace />;
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import UpdateForm from "../components/Update/UpdateForm";
 
-const ProductDetails = () => {
+const ProductDetails = ({ user }) => {
+  if (!user) return <Navigate to="/login" replace />;
   const [product, setProduct] = useState();
   const { id } = useParams();
 

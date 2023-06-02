@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
-import "./ProductList.scss";
 import React, { useState, useEffect } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import "./ProductList.scss";
 
 const ProductList = ({ user }) => {
-  // const ProductList = () => {
-
   if (!user) return <Navigate to="/login" replace />;
 
   const [product, setProduct] = useState([]);
 
   // READ: Get all the products from db
+
   useEffect(() => {
     fetch("http://localhost:8080/api/products")
       .then((res) => res.json())
@@ -27,8 +25,6 @@ const ProductList = ({ user }) => {
     e.stopPropagation();
 
     const token = localStorage.getItem("token");
-
-    // setIsDeleting(true);
 
     setTimeout(() => {
       fetch(`http://localhost:8080/api/products/${itemId}`, {
@@ -48,8 +44,6 @@ const ProductList = ({ user }) => {
         .catch((err) => console.log(err));
     }, 1000);
   };
-
-  // if (!user) return <Navigate to="/login" />;
 
   return (
     <div className="container my-5 py-3 z-depth-1 ">
@@ -95,7 +89,6 @@ const ProductList = ({ user }) => {
                         src={item.imgURL}
                         alt={item.name}
                         className="custom-img"
-                        // className="rounded width:120px"
                       />
                     </th>
                     <td>
