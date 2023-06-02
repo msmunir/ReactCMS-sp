@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./OneOrderLine.scss";
 
 const OneOrderLine = ({ item }) => {
   const [singleProduct, setSingleProduct] = useState();
@@ -24,16 +25,20 @@ const OneOrderLine = ({ item }) => {
   }
 
   return (
-    <div>
-      <tr className="align-middle">
-        <th scope="row">{singleProduct.imgURL}</th>
-        <td>{singleProduct.name}</td>
-        <td>{singleProduct.category}</td>
-        <td>{singleProduct.price}</td>
-        <td>{singleProduct.quantity}</td>
-        <td>€{singleProduct.price * singleProduct.quantity}</td>
-      </tr>
-    </div>
+    <tr className="align-middle">
+      <th scope="row">
+        <img
+          src={singleProduct.imgURL}
+          alt={singleProduct.name}
+          className="c-img"
+        />
+      </th>
+      <td>{singleProduct.name}</td>
+      <td>{singleProduct.category}</td>
+      <td>{singleProduct.price}</td>
+      <td>{item.quantity}</td>
+      <td>€{singleProduct.price * item.quantity}</td>
+    </tr>
   );
 };
 

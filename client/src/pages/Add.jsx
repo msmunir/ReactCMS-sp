@@ -57,7 +57,9 @@ const Add = ({ user }) => {
       })
       .catch((err) => console.log(err));
 
-    alert("Successfully Created product.");
+    // setTimeout(() => {
+    //   alert("Successfully Created product.");
+    // }, 1000);
   };
   return (
     <div className="container mb-5">

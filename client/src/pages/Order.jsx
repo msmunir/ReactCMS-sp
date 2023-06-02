@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 const Order = ({ user }) => {
   if (!user) return <Navigate to="/login" replace />;
   const [orders, setOrders] = useState([]);
+  const { id } = useParams();
   const token = localStorage.getItem("token");
 
   useEffect(() => {
@@ -44,29 +45,30 @@ const Order = ({ user }) => {
           </tr>
         </thead>
         <tbody className="table-group-divider">
-          {orders.map((item) => (
-            <tr className="align-middle" key={item._id}>
-              {/* <Link to={`/orderDetails/${item._id}`}> */}
-              <th scope="row">{item._id}</th>
-              <td>€{item.totalPrice}</td>
-              <td>{item.pending ? "pending" : "transit"}</td>
-              <td>{item.createdAt.slice(0, 10)}</td>
-              {/* </Link> */}
-              <td>
-                {/* <button className="btn btn-secondary">Update</button> */}
+          {orders &&
+            orders.map((item) => (
+              <tr className="align-middle" key={item._id}>
+                {/* <Link to={`/orderDetails/${item._id}`}> */}
+                <th scope="row">{item._id}</th>
+                <td>€{item.totalPrice}</td>
+                <td>{item.pending ? "pending" : "transit"}</td>
+                <td>{item.createdAt.slice(0, 10)}</td>
+                {/* </Link> */}
+                <td>
+                  {/* <button className="btn btn-secondary">Update</button> */}
 
-                <Link to={`/orderDetails/${item._id}`}>
-                  <button type="button" className="btn btn-secondary">
-                    Update
-                  </button>
-                </Link>
+                  <Link to={`/orderDetails/${item._id}`}>
+                    <button type="button" className="btn btn-secondary">
+                      Update
+                    </button>
+                  </Link>
 
-                <Link to={`/orderDetails/${item._id}`}>
-                  <button className="btn btn-secondary mx-1">Details</button>
-                </Link>
-              </td>
-            </tr>
-          ))}
+                  <Link to={`/orderDetails/${item._id}`}>
+                    <button className="btn btn-secondary mx-1">Details</button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>

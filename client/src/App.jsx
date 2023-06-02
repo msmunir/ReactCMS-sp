@@ -37,7 +37,7 @@ const App = () => {
           element: <Order user={user} />,
         },
         {
-          path: "orderDetails",
+          path: "orderDetails/:id",
           element: <OrderDetails user={user} />,
         },
         {

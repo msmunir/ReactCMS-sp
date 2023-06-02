@@ -46,7 +46,7 @@ const UpdateForm = ({ product }) => {
       })
       .catch((err) => console.log(err));
 
-    alert("Product updated successfully");
+    // alert("Product updated successfully");
   };
 
   return (
