@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -15,12 +16,14 @@ const Home = () => {
               <p className="mb-4 pb-2 dark-grey-text">
                 Please Login to gain access.
               </p>
-              <button
-                type="button"
-                className="btn btn-primary btn-rounded btn-md ml-md-0"
-              >
-                Get started
-              </button>
+              <Link to={"/login"}>
+                <button
+                  type="button"
+                  className="btn btn-primary btn-rounded btn-md ml-md-0"
+                >
+                  Get started
+                </button>
+              </Link>
             </div>
 
             <div className="col-md-6">

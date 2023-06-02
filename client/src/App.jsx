@@ -3,7 +3,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import Add from "./pages/Add";
-import Product from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Order from "./pages/Order";
 import Login from "./pages/login";
@@ -22,7 +21,7 @@ const App = () => {
         },
         {
           path: "products",
-          element: <Products />,
+          element: <Products user={user} />,
         },
         {
           path: "productDetails/:id",

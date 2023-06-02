@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "./ProductList.scss";
 import React, { useState, useEffect } from "react";
-// import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 
-// const ProductList = ({ user }) => {
-const ProductList = () => {
+const ProductList = ({ user }) => {
+  // const ProductList = () => {
+
+  if (!user) return <Navigate to="/login" replace />;
+
   const [product, setProduct] = useState([]);
 
   // READ: Get all the products from db
@@ -52,7 +55,7 @@ const ProductList = () => {
     <div className="container my-5 py-3 z-depth-1 ">
       <div>
         <Link to={`/add`}>
-          <button type="button" class="btn btn-success mx-5 mb-5 px-5">
+          <button type="button" className="btn btn-success mx-5 mb-5 px-5">
             Add product
           </button>
         </Link>
@@ -60,7 +63,7 @@ const ProductList = () => {
       <section className="dark-grey-text">
         <div className="table-responsive px-5">
           {/* <table className="table table-hover "> */}
-          <table class="table product-table mb-0">
+          <table className="table product-table mb-0">
             <thead className="mdb-color lighten-5">
               <tr>
                 <th></th>
