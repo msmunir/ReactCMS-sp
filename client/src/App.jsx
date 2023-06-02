@@ -7,6 +7,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Order from "./pages/Order";
 import Login from "./pages/login";
 import Products from "./pages/Products";
+import OrderDetails from "./pages/OrderDetails";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -32,8 +33,12 @@ const App = () => {
           element: <Add user={user} />,
         },
         {
-          path: "order",
-          element: <Order />,
+          path: "orders",
+          element: <Order user={user} />,
+        },
+        {
+          path: "orderDetails",
+          element: <OrderDetails user={user} />,
         },
         {
           path: "login",

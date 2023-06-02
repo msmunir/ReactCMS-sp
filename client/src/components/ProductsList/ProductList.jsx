@@ -83,7 +83,7 @@ const ProductList = ({ user }) => {
             <tbody>
               {product.map((item) => {
                 return (
-                  <tr key={item._id}>
+                  <tr className="align-middle" key={item._id}>
                     <th scope="row">
                       <img
                         src={item.imgURL}
@@ -100,7 +100,7 @@ const ProductList = ({ user }) => {
                     <td>€{item.price}</td>
                     <td>{item.description}</td>
 
-                    <td className="d-flex justify-content-center align-items-center">
+                    <td className="td-p d-flex justify-content-center align-items-center">
                       <div>
                         <Link to={`/productDetails/${item._id}`}>
                           <button
