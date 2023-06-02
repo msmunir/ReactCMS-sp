@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Navbar.scss";
 
 const Navbar = ({ user, setUser }) => {
   const handleLogout = () => {
@@ -11,7 +10,10 @@ const Navbar = ({ user, setUser }) => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          BmarKeto
+          <img
+            src="https://s7template.com/tf/bmarketo/assets/img/logo.png"
+            alt="Bmarketo"
+          />
         </Link>
         <button
           className="navbar-toggler"
